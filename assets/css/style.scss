@@ -1,0 +1,23 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+// Cayman theme adds max-width to images, which causes badges inside tables to
+// shrink.
+// To prevent this, override styles for badge images.
+img[src*="img.shields.io"],
+img[src*="badgen.net"] {
+  max-width: none;
+}
+
+// Make font size in large tables smaller
+.large-table {
+  font-size: 80%;
+}
+
+// Need specificity >= (0, 1, 2) to override Cayman theme
+table.large-table th,
+table.large-table td {
+  padding: 0.4rem 0.8rem;
+}
