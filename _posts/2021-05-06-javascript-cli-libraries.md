@@ -26,7 +26,7 @@ Several libraries provide many features out of the box: Help generation, error h
 <!-- prettier-ignore-start -->
 
 {: .large-table }
-|  | [argparse] | [args] | [caporal][][^note-caporal] | [clap] | [commander] | [dashdash] | [meow] | [optimist] | [optionator] | [sade] | [yargs] |
+|  | [argparse] | [args] | [caporal][][^note-caporal] | [clap] | [commander] | [dashdash] | [meow] | [optimist] | [optionator] | [sade] | [yargs][][^note-yargs] |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Version | ![][argparse-version] | ![][args-version] | ![][caporal-old-version]<br>![][caporal-version] | ![][clap-version] | ![][commander-version] | ![][dashdash-version] | ![][meow-version] | ![][optimist-version] | ![][optionator-version] | ![][sade-version] | ![][yargs-version] |
 | Downloads | ![][argparse-downloads] | ![][args-downloads] | ![][caporal-old-downloads]<br>![][caporal-downloads] | ![][clap-downloads] | ![][commander-downloads] | ![][dashdash-downloads] | ![][meow-downloads] | ![][optionator-downloads] | ![][sade-downloads] | ![][yargs-downloads] |
@@ -37,6 +37,8 @@ Several libraries provide many features out of the box: Help generation, error h
 | Open Issues | ![][argparse-issues] | ![][args-issues] | ![][caporal-issues] | ![][clap-issues] | ![][commander-issues] | ![][dashdash-issues] | ![][meow-issues] | ![][optimist-issues] | ![][optionator-issues] | ![][sade-issues] | ![][yargs-issues] |
 | Open PRs | ![][argparse-pull-requests] | ![][args-pull-requests] | ![][caporal-pull-requests] | ![][clap-pull-requests] | ![][commander-pull-requests] | ![][dashdash-pull-requests] | ![][meow-pull-requests] | ![][optimist-pull-requests] | ![][optionator-pull-requests] | ![][sade-pull-requests] | ![][yargs-pull-requests] |
 | Parser | (self)[^note-self] | [mri] | (self)[^note-self] | (self)[^note-self] | (self)[^note-self] | (self)[^note-self] | [yargs-parser] | [minimist] | (self)[^note-self] | [mri] | [yargs-parser] |
+| [Dependency count](#dependency-count) | ![][depcount-argparse] | ![][depcount-args] | ![][depcount-caporal] | ![][depcount-clap] | ![][depcount-commander] | ![][depcount-dashdash] | ![][depcount-meow] | ![][depcount-optimist] | ![][depcount-optionator] | ![][depcount-sade] | ![][depcount-yargs] |
+| [Node.js APIs used](#nodejs-apis-used) | `assert`, `fs`, `path`, `process`, `util` | `child_process`, `fs`, `path`, `process` | `events`, `fs`, `os`, `path`, `process`, `util` | `path`, `process` | `child_process`, `events`, `fs`, `path`, `process` | `fs`, `path`, `process`, `util` | `path`, `process`, `url` | `path`, `process` | `process` | `process` | - |
 
 <!-- prettier-ignore-end -->
 
@@ -130,15 +132,27 @@ Several libraries provide many features out of the box: Help generation, error h
 [yargs-last-commit]: https://img.shields.io/github/last-commit/yargs/yargs?label=
 [yargs-issues]: https://img.shields.io/github/issues/yargs/yargs?label=
 [yargs-pull-requests]: https://img.shields.io/github/issues-pr/yargs/yargs?label=
+[depcount-argparse]: https://badgen.net/bundlephobia/dependency-count/argparse?label=
+[depcount-args]: https://badgen.net/bundlephobia/dependency-count/args?label=
+[depcount-caporal]: https://badgen.net/bundlephobia/dependency-count/@caporal/core?label=
+[depcount-clap]: https://badgen.net/bundlephobia/dependency-count/clap?label=
+[depcount-commander]: https://badgen.net/bundlephobia/dependency-count/commander?label=
+[depcount-dashdash]: https://badgen.net/bundlephobia/dependency-count/dashdash?label=
+[depcount-meow]: https://badgen.net/bundlephobia/dependency-count/meow?label=
+[depcount-optimist]: https://badgen.net/bundlephobia/dependency-count/optimist?label=
+[depcount-optionator]: https://badgen.net/bundlephobia/dependency-count/optionator?label=
+[depcount-sade]: https://badgen.net/bundlephobia/dependency-count/sade?label=
+[depcount-yargs]: https://badgen.net/bundlephobia/dependency-count/yargs?label=
 
 [^note-caporal]: Caporal v1 is released as the `caporal` package, while v2 is the `@caporal/core` package. As such, their download numbers are counted separately.
 [^note-self]: These libraries parse options directly instead of relying on another package.
+[^note-yargs]: I only looked at the browser-specific bundle of yargs. The CommonJS bundle uses several Node.js APIs and cannot be bundled for Rhino.
 
 Unfortunately, almost all of them rely on Node.js builtins or use async code. They are also fairly large in terms of bundle size. This makes them unsuitable for my use case.
 
-## Minimal
+## Minimal argument parsers
 
-These libraries focus on parsing an array of arguments and provide little else. These minimal libraries are often used to power the batteries-included libraries.
+These libraries focus on parsing an array of arguments and provide little else. They are sometimes used to power the batteries-included libraries.
 
 <!-- prettier-ignore-start -->
 
