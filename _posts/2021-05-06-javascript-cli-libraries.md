@@ -39,6 +39,7 @@ Several libraries provide many features out of the box: Help generation, error h
 | Parser | (self)[^note-self] | [mri] | (self)[^note-self] | (self)[^note-self] | (self)[^note-self] | (self)[^note-self] | [yargs-parser] | [minimist] | (self)[^note-self] | [mri] | [yargs-parser] |
 | [Dependency count](#dependency-count) | ![][depcount-argparse] | ![][depcount-args] | ![][depcount-caporal] | ![][depcount-clap] | ![][depcount-commander] | ![][depcount-dashdash] | ![][depcount-meow] | ![][depcount-optimist] | ![][depcount-optionator] | ![][depcount-sade] | ![][depcount-yargs] |
 | [Node.js APIs used](#nodejs-apis-used) | `assert`, `fs`, `path`, `process`, `util` | `child_process`, `fs`, `path`, `process` | `events`, `fs`, `os`, `path`, `process`, `util` | `path`, `process` | `child_process`, `events`, `fs`, `path`, `process` | `fs`, `path`, `process`, `util` | `path`, `process`, `url` | `path`, `process` | `process` | `process` | - |
+| [Async code](#async-code) | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? | ⭕ |
 
 <!-- prettier-ignore-end -->
 
@@ -236,7 +237,7 @@ Feature description:
 | -------- | :-: | :---------------: | :-----: | :------: | :-: | :----------: |
 | [Dependency count](#dependency-count) | ![][depcount-arg] | ![][depcount-command-line-args] | ![][depcount-getopts] | ![][depcount-minimist] | ![][depcount-mri] | ![][depcount-yargs-parser] |
 | [Node.js APIs used](#nodejs-apis-used) | `process` | `process` | - | - | - | - |
-| [Async code](#async-code) | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| [Async code](#async-code) | - | - | - | - | - | - |
 | [Accept single string](#accept-single-string) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
 | [Negative options](#negative-options) | ❌ | ❌ | ✅ | ✅ | ✅ | ✅⚙ |
 | [Camelcase alias](#camelcase-alias) | ❌ | ✅⚙ | ❌ | ❌ | ❌ | ✅⚙ |
