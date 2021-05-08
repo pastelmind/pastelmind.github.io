@@ -162,7 +162,7 @@ These libraries focus on parsing an array of arguments and provide little else. 
 | --- | --- | --- | --- | --- | --- | --- |
 | Version | ![][arg-version] | ![][command-line-args-version] | ![][getopts-version] | ![][minimist-version] | ![][mri-version] | ![][yargs-parser-version] |
 | Downloads | ![][arg-downloads] | ![][command-line-args-downloads] | ![][getopts-downloads] | ![][minimist-downloads] | ![][mri-downloads] | ![][yargs-parser-downloads] |
-| Stars | ![][arg-size] | ![][command-line-args-size] | ![][getopts-size] | ![][minimist-size] | ![][mri-size] | ![][yargs-parser-size] |
+| Stars | ![][arg-stars] | ![][command-line-args-stars] | ![][getopts-stars] | ![][minimist-stars] | ![][mri-stars] | ![][yargs-parser-stars] |
 | Minified Size | ![][arg-size] | ![][command-line-args-size] | ![][getopts-size] | ![][minimist-size] | ![][mri-size] | ![][yargs-parser-size] |
 | First Commit | Jun 2012 | May 2014 | May 2015 | Jun 2013 | Apr 2017 | Jan 2016 |
 | Last Commit | ![][arg-last-commit] | ![][command-line-args-last-commit] | ![][getopts-last-commit] | ![][minimist-last-commit] | ![][mri-last-commit] | ![][yargs-parser-last-commit] |
