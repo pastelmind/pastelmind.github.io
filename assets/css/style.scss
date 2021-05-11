@@ -21,3 +21,7 @@ table.large-table th,
 table.large-table td {
   padding: 0.4rem 0.8rem;
 }
+
+summary {
+  cursor: pointer;
+}
