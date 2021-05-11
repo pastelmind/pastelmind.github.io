@@ -8,9 +8,15 @@ tags:
 
 There are many JavaScript libraries for parsing command line arguments. These can be categorized broadly into two groups: Batteries-included and Minimal.
 
+<details markdown="1">
+<summary>Table of Contents</summary>
+* TOC
+{:toc}
+</details>
+
 ## Disclaimer: What am I looking for?
 
-I need an command line parser that can run in [Mozilla Rhino](https://github.com/mozilla/rhino). This puts some restrictions on my choices:
+I need a command line parser that can run in [Mozilla Rhino](https://github.com/mozilla/rhino). This restricts my choices:
 
 - No Node.js builtins: Since Rhino does not have Node.js modules (e.g. [path](https://nodejs.org/docs/latest/api/path.html)), and it would be difficult to polyfill them or inject stubs during bundling.
 - No `setTimeout()`, promises, or async/await: Since Rhino does not have any of these features, I have to avoid libraries that use these features.
@@ -348,3 +354,17 @@ While some may find this feature useful, others may deem it unnecessary as it in
 ### Custom conversion functions
 
 Some libraries allow converting option values using callbacks.
+
+## External resources
+
+Other people have attempted to compare JavaScript CLI argument parsers:
+
+- [Comparing CLI Building Libraries](https://dev.to/vonagedev/comparing-cli-building-libraries-13ed), 2020-06-12: Discusses [oclif], [gluegun], [ink], [caporal]. Note that these are actual CLI-building frameworks and are not suitable for bundling.
+- [Node argument parsers in 2018](https://pantas.net/node_argument_parsers/), 2018-10-21: A detailed, comprehensive comparison of [argparse], [commander], [command-line-args], [caporal], [optionator], [sade], [sywac], [yargs]. Also mentions [gar], [meow], [minimist], [mri], [nopt].
+
+[gar]: https://github.com/ethanent/gar
+[gluegun]: https://github.com/infinitered/gluegun
+[ink]: https://github.com/vadimdemedes/ink
+[nopt]: https://github.com/npm/nopt
+[oclif]: https://oclif.io/
+[sywac]: https://github.com/sywac/sywac
