@@ -119,3 +119,5 @@ let v1 = _c("Foo Bar");         // type:  "Foo Bar"
 // For tuples
 let v2 = _t(_c("baz"), _c(12)); // type:  ["baz", 12]
 ```
+
+Update 2021-08-31: TypeScript 4.5 will support const assertions in JSDoc. For details, see the [relevant pull request](https://github.com/microsoft/TypeScript/pull/45464).
