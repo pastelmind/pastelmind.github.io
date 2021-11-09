@@ -1,8 +1,7 @@
 ---
 categories: Python Packaging
+title: "Experiment: From Setuptools to Flit"
 ---
-
-# Experiment: From Setuptools to Flit
 
 I've been working on a small personal project named [d2animdata](https://github.com/pastelmind/d2animdata). It's a single-module Python script that is now [published on PyPI](https://pypi.org/project/d2animdata/). I learned a lot about packaging in Python while working on this project. I recently moved away from [Setuptools] to [Flit] and would like to document my thoughts on the journey.
 
