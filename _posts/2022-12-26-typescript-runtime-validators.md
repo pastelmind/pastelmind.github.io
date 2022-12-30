@@ -19,7 +19,9 @@ tags:
 
 I want to validate arbitrary JavaScript values--usually returned by `JSON.parse()`.
 
-- I need to specify my own schema.
+- I want to specify the schema in TypeScript code.
+- I want runtime validators that also serve as type assertion functions.
+  - This rules out [Joi](https://github.com/hapijs/joi), which [doesn't support static type inference (yet).](https://github.com/hapijs/joi/issues/1557)
 - A successfully validated value should be given a TypeScript type that matches the schema.
 - No compile-time code generation. This excludes solutions such as [Typia](https://github.com/samchon/typia).
   - These solutions rely on a specific transpiler, such as the TypeScript compiler or Babel. This makes it difficult to use them with other transpilers like esbuild.
@@ -29,14 +31,14 @@ I want to validate arbitrary JavaScript values--usually returned by `JSON.parse(
 <!-- prettier-ignore-start -->
 
 {: .large-table }
-|  | [Ajv] | [Joi] | [Runtypes] | [Superstruct] | [TypeBox] | [Yup] | [Zod] |
-| Version | ![][ajv-version] | ![][joi-version] | ![][runtypes-version] | ![][superstruct-version] | ![][typebox-version] | ![][yup-version] | ![][zod-version] |
-| Downloads | ![][ajv-downloads] | ![][joi-downloads] | ![][runtypes-downloads] | ![][superstruct-downloads] | ![][typebox-downloads] | ![][yup-downloads] | ![][zod-downloads] |
-| Stars | ![][ajv-stars] | ![][joi-stars] | ![][runtypes-stars] | ![][superstruct-stars] | ![][typebox-stars] | ![][yup-stars] | ![][zod-stars] |
-| Minified Bundle Size | ![][ajv-size] | ![][joi-size] | ![][runtypes-size] | ![][superstruct-size] | ![][typebox-size][^note-typebox-size] | ![][yup-size] | ![][zod-size] |
-| Last Commit | ![][ajv-lastcommit] | ![][joi-lastcommit] | ![][runtypes-lastcommit] | ![][superstruct-lastcommit] | ![][typebox-lastcommit] | ![][yup-lastcommit] | ![][zod-lastcommit] |
-| Open Issues | ![][ajv-issues] | ![][joi-issues] | ![][runtypes-issues] | ![][superstruct-issues] | ![][typebox-issues] | ![][yup-issues] | ![][zod-issues] |
-| Open PRs | ![][ajv-prs] | ![][joi-prs] | ![][runtypes-prs] | ![][superstruct-prs] | ![][typebox-prs] | ![][yup-prs] | ![][zod-prs] |
+|  | [Ajv] | [Runtypes] | [Superstruct] | [TypeBox] | [Yup] | [Zod] |
+| Version | ![][ajv-version] | ![][runtypes-version] | ![][superstruct-version] | ![][typebox-version] | ![][yup-version] | ![][zod-version] |
+| Downloads | ![][ajv-downloads] | ![][runtypes-downloads] | ![][superstruct-downloads] | ![][typebox-downloads] | ![][yup-downloads] | ![][zod-downloads] |
+| Stars | ![][ajv-stars] | ![][runtypes-stars] | ![][superstruct-stars] | ![][typebox-stars] | ![][yup-stars] | ![][zod-stars] |
+| Minified Bundle Size | ![][ajv-size] | ![][runtypes-size] | ![][superstruct-size] | ![][typebox-size][^note-typebox-size] | ![][yup-size] | ![][zod-size] |
+| Last Commit | ![][ajv-lastcommit] | ![][runtypes-lastcommit] | ![][superstruct-lastcommit] | ![][typebox-lastcommit] | ![][yup-lastcommit] | ![][zod-lastcommit] |
+| Open Issues | ![][ajv-issues] | ![][runtypes-issues] | ![][superstruct-issues] | ![][typebox-issues] | ![][yup-issues] | ![][zod-issues] |
+| Open PRs | ![][ajv-prs] | ![][runtypes-prs] | ![][superstruct-prs] | ![][typebox-prs] | ![][yup-prs] | ![][zod-prs] |
 
 <!-- prettier-ignore-end -->
 
@@ -48,14 +50,6 @@ I want to validate arbitrary JavaScript values--usually returned by `JSON.parse(
 [ajv-issues]: https://img.shields.io/github/issues/ajv-validator/ajv?label=
 [ajv-lastcommit]: https://img.shields.io/github/last-commit/ajv-validator/ajv?label=
 [ajv-prs]: https://img.shields.io/github/issues-pr/ajv-validator/ajv?label=
-[joi]: https://github.com/hapijs/joi
-[joi-version]: https://badgen.net/npm/v/joi?label=
-[joi-downloads]: https://img.shields.io/npm/dw/joi?label=
-[joi-stars]: https://img.shields.io/github/stars/hapijs/joi?logo=github&label=
-[joi-size]: https://img.shields.io/bundlephobia/min/joi?label=
-[joi-issues]: https://img.shields.io/github/issues/hapijs/joi?label=
-[joi-lastcommit]: https://img.shields.io/github/last-commit/hapijs/joi?label=
-[joi-prs]: https://img.shields.io/github/issues-pr/hapijs/joi?label=
 [runtypes]: https://github.com/pelotom/runtypes
 [runtypes-version]: https://badgen.net/npm/v/runtypes?label=
 [runtypes-downloads]: https://img.shields.io/npm/dw/runtypes?label=
