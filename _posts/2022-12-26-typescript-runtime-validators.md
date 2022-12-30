@@ -33,7 +33,7 @@ I want to validate arbitrary JavaScript values--usually returned by `JSON.parse(
 | Version | ![][ajv-version] | ![][joi-version] | ![][runtypes-version] | ![][superstruct-version] | ![][typebox-version] | ![][yup-version] | ![][zod-version] |
 | Downloads | ![][ajv-downloads] | ![][joi-downloads] | ![][runtypes-downloads] | ![][superstruct-downloads] | ![][typebox-downloads] | ![][yup-downloads] | ![][zod-downloads] |
 | Stars | ![][ajv-stars] | ![][joi-stars] | ![][runtypes-stars] | ![][superstruct-stars] | ![][typebox-stars] | ![][yup-stars] | ![][zod-stars] |
-| Minified Bundle Size | ![][ajv-size] | ![][joi-size] | ![][runtypes-size] | ![][superstruct-size] | ![][typebox-size] | ![][yup-size] | ![][zod-size] |
+| Minified Bundle Size | ![][ajv-size] | ![][joi-size] | ![][runtypes-size] | ![][superstruct-size] | ![][typebox-size][^note-typebox-size] | ![][yup-size] | ![][zod-size] |
 | Open Issues | ![][ajv-issues] | ![][joi-issues] | ![][runtypes-issues] | ![][superstruct-issues] | ![][typebox-issues] | ![][yup-issues] | ![][zod-issues] |
 | Open PRs | ![][ajv-prs] | ![][joi-prs] | ![][runtypes-prs] | ![][superstruct-prs] | ![][typebox-prs] | ![][yup-prs] | ![][zod-prs] |
 
@@ -88,3 +88,9 @@ I want to validate arbitrary JavaScript values--usually returned by `JSON.parse(
 [zod-size]: https://img.shields.io/bundlephobia/min/zod?label=
 [zod-issues]: https://img.shields.io/github/issues/colinhacks/zod?label=
 [zod-prs]: https://img.shields.io/github/issues-pr/colinhacks/zod?label=
+
+[^note-typebox-size]: This stat is misleading because `@sinclair/typebox` exports the built-in validator ("TypeCompiler") using a separate suffix. Testing indicates that, as of v0.25.16, adding the TypeCompiler increases the bundle size to ~40KB.
+
+## External Links
+
+- [moltar's comparison of TypeScript runtime type validation tools](https://moltar.github.io/typescript-runtime-type-benchmarks/)
